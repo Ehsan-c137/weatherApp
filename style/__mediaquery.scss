@@ -1,0 +1,44 @@
+// below 688px
+@media (max-width: 43em) {
+   html {
+      font-size: 59%;
+   }
+}
+
+// below 640px
+@media (max-width: 40rem) {
+   html {
+      font-size: 55%;
+   }
+   .main {
+      width: 90%;
+   }
+   // .sun-hu-uv-container {
+   //    // width: 93%;
+   // }
+   .overall-with-chart-container {
+      grid-template-columns: 1fr !important;
+   }
+   .chart-js {
+      width: 99%;
+   }
+}
+// // below 528
+// @media (max-width: 33em) {
+//    html {
+//       font-size: 50%;
+//    }
+//    .main-container {
+//       padding: 2.8rem;
+//    }
+// }
+
+// // below 416
+// @media (max-width: 26em) {
+//    .form {
+//       flex-direction: column;
+//    }
+//    .task-text {
+//       font-size: 1.8rem;
+//    }
+// }

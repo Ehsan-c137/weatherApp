@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+         rel="stylesheet"
+      />
+
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      />
+      <link rel="stylesheet" href="./style/main.css" />
+
+      <script
+         defer
+         src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"
+      ></script>
+      <script defer src="./app/application.js"></script>
+      <script defer src="./app/chart.js"></script>
+
+      <title>Weather</title>
+   </head>
+   <body>
+      <main class="main">
+         <div class="header">
+            <h3 class="header-title">Weather</h3>
+            <div class="header-ham-form">
+               <form class="input-container">
+                  <input
+                     type="text"
+                     class="input"
+                     placeholder="Enter your location.."
+                  />
+                  <i class="fas fa-search-location search-btn"></i>
+               </form>
+               <!-- <div
+                  id="hamburger"
+                  class="hamburgur"
+                  onclick="this.classList.toggle('open');"
+               >
+                  <svg width="50" height="40" viewBox="0 0 100 100">
+                     <path
+                        class="line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                     />
+                     <path class="line line2" d="M 20,50 H 80" />
+                     <path
+                        class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                     />
+                  </svg>
+               </div> -->
+            </div>
+         </div>
+         <div class="weather-overall">
+            <div class="weather-overall-left">
+               <img
+                  class="weather-overall-left-img"
+                  src="./images/01d.png"
+                  alt="weather icon"
+               />
+               <h1 class="temperature">
+                  22°<span class="temp-degree">C</span>
+               </h1>
+               <p class="location">Tehran</p>
+            </div>
+
+            <div class="weather-overall-right">
+               <div class="clock">12:56</div>
+               <div class="weather-overall-right_dec">
+                  Friday, broken clouds
+               </div>
+            </div>
+         </div>
+         <!--  -->
+         <div class="overall-with-chart-container">
+            <div class="sun-hu-uv-container">
+               <div class="sun-hu-uv">
+                  <div class="hu sun-hu-uv__layout">
+                     <img src="./images/humidity.png" alt="humidity icon" />
+                     <div class="grid-1col">
+                        <p class="humidity-text">humidity</p>
+                        <p class="humidity-percentage">43%</p>
+                     </div>
+                  </div>
+
+                  <div class="sunrise sun-hu-uv__layout">
+                     <img src="./images/sunrise.png" alt="sunrise icon" />
+                     <div class="grid-1col">
+                        <p class="sunrise-text">sunrise</p>
+                        <p class="sunrise-time">6:40</p>
+                     </div>
+                  </div>
+
+                  <div class="uv-index sun-hu-uv__layout">
+                     <img src="./images/uv-index.png" alt="uv index icon" />
+                     <div class="grid-1col">
+                        <p class="uv-index-text">UV index</p>
+                        <p class="uv-index-number">6 of 10</p>
+                     </div>
+                  </div>
+
+                  <div class="sunset sun-hu-uv__layout">
+                     <img src="./images/sunset.png" alt="sunset icon" />
+                     <div class="grid-1col">
+                        <p class="sunset-text">sunset</p>
+                        <p class="sunset-time">05:40</p>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- <div class="monthly-rain">
+                  <div>
+                     <p>monthly Rainfall</p>
+                     <p>45mm</p>
+                  </div>
+                  <div>
+                     <p>This year</p>
+                     <p>+17%</p>
+                  </div>
+               </div> -->
+            </div>
+            <!--  -->
+            <div class="chart-js">
+               <canvas id="myChart"></canvas>
+            </div>
+            <!--  -->
+         </div>
+
+         <!-- <div class="hamburger-menu">here is reserved</div> -->
+      </main>
+   </body>
+</html>

@@ -1,0 +1,17 @@
+* {
+   padding: 0rem;
+   margin: 0rem;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+   font-family: "Roboto", sans-serif;
+}
+
+.grid-1col {
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   justify-items: center;
+}
