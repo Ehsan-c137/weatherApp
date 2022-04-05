@@ -6,7 +6,7 @@
 }
 
 // below 640px
-@media (max-width: 40rem) {
+@media (max-width: 40em) {
    html {
       font-size: 55%;
    }
@@ -22,23 +22,15 @@
    .chart-js {
       width: 99%;
    }
+   .input {
+      width: 13.5rem;
+   }
 }
-// // below 528
-// @media (max-width: 33em) {
-//    html {
-//       font-size: 50%;
-//    }
-//    .main-container {
-//       padding: 2.8rem;
-//    }
-// }
 
-// // below 416
-// @media (max-width: 26em) {
-//    .form {
-//       flex-direction: column;
-//    }
-//    .task-text {
-//       font-size: 1.8rem;
-//    }
-// }
+// below 368
+@media (max-wdith: 23em) {
+   .input {
+      width: 16rem !important;
+      background-color: blue;
+   }
+}

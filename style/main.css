@@ -162,7 +162,7 @@ body {
           box-shadow: none;
 }
 
-.input-container input {
+.input-container .input {
   border: none;
   outline: none;
 }
@@ -282,7 +282,7 @@ body {
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 40em) {
   html {
     font-size: 55%;
   }
@@ -295,6 +295,16 @@ body {
   }
   .chart-js {
     width: 99%;
+  }
+  .input {
+    width: 13.5rem;
+  }
+}
+
+@media (max-wdith: 23em) {
+  .input {
+    width: 16rem !important;
+    background-color: blue;
   }
 }
 /*# sourceMappingURL=main.css.map */
