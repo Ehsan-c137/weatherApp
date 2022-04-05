@@ -2,6 +2,11 @@
 
 let chartJsWeek = [];
 function getChartDays(data) {
+   if (chartJsWeek.length > 0) {
+      chartJsWeek = [];
+      myChart.labels = [];
+      myChart.update();
+   }
    for (let i = 0; i < 7; i++) {
       let time = new Date(data.daily[i].dt * 1000).toLocaleString("en-us", {
          weekday: "short",
@@ -27,7 +32,6 @@ function showDailyHumidity(d) {
    }
    myChart.data.datasets[0].data = humidityData;
    myChart.update();
-   console.log(humidityData);
 }
 
 const ctx = document.getElementById("myChart").getContext("2d");
@@ -54,12 +58,3 @@ const myChart = new Chart(ctx, {
       responsive: true,
    },
 });
-
-// function addData(chart, data) {
-//    // chart.data.labels.push(label);
-
-//    chart.data.datasets.forEach((dataset) => {
-//       dataset.data.push(...data);
-//    });
-//    chart.update();
-// }
