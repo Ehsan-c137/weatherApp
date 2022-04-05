@@ -2,6 +2,7 @@
 
 const searchBtn = document.querySelector(".search-btn");
 const input = document.querySelector(".input");
+const inputContainer = document.querySelector(".input-container");
 
 const clock = document.querySelector(".clock");
 const dayDec = document.querySelector(".weather-overall-right_dec");
@@ -38,7 +39,6 @@ function fetchWeather(city) {
       .then((response) => response.json())
       .then((data) => {
          displayWeather(data);
-         //  console.log(data);
       });
 }
 
@@ -47,9 +47,13 @@ searchBtn.addEventListener("click", function () {
       fetchWeather(input.value);
    }
 });
-input.addEventListener("keyup", function (e) {
-   console.log(e.target);
+inputContainer.addEventListener("keyup", function (e) {
+   e.preventDefault();
+   if (e.key == "Enter") {
+      fetchWeather(input.value);
+   }
 });
+
 fetchWeather("london");
 function displayWeather(data) {
    const { name } = data;
