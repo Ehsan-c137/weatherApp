@@ -2,6 +2,7 @@
 
 <p>a simple weather app</p>
 <ul>
+   <li>temp & local time</li>
    <li>sunrise & sunset time</li>
    <li>uv index</li>
    <li>daily humidity</li>
