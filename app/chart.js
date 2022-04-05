@@ -6,7 +6,6 @@ function getChartDays(data) {
       let time = new Date(data.daily[i].dt * 1000).toLocaleString("en-us", {
          weekday: "short",
       });
-      console.log(data.daily[i].dt);
       chartJsWeek.push(time);
    }
    myChart.update();

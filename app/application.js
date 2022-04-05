@@ -47,6 +47,9 @@ searchBtn.addEventListener("click", function () {
       fetchWeather(input.value);
    }
 });
+input.addEventListener("keyup", function (e) {
+   console.log(e.target);
+});
 fetchWeather("london");
 function displayWeather(data) {
    const { name } = data;
@@ -75,7 +78,6 @@ function getDailyData(lat, lon) {
          showLocalTime(data);
          showSetRiseSun(data);
          getChartDays(data);
-         console.log(data);
       });
 }
 
