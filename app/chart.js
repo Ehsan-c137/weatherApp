@@ -53,6 +53,7 @@ const myChart = new Chart(ctx, {
       scales: {
          y: {
             beginAtZero: true,
+            max: 100,
          },
       },
       responsive: true,
