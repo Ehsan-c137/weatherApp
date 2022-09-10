@@ -36,7 +36,12 @@ function fetchWeather(city) {
    fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
    )
-      .then((response) => response.json())
+      .then((response) => {
+         if (!response.ok) {
+            alert(response.statusText);
+         }
+         return response.json();
+      })
       .then((data) => {
          displayWeather(data);
       });
