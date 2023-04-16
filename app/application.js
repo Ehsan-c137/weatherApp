@@ -29,6 +29,15 @@ function showDay() {
    return day;
 }
 
+const showError = (error) => {
+   const errorEl = document.querySelector(".error-modal");
+   errorEl.textContent = error;
+   errorEl.classList.add("error-modal-active");
+   setTimeout(() => {
+      errorEl.classList.remove("error-modal-active");
+   }, 4000);
+};
+
 dayDec.textContent = showDay();
 
 const apiKey = "fdf7cba70862ec4cdb5083aebdd424b7";
@@ -38,7 +47,8 @@ function fetchWeather(city) {
    )
       .then((response) => {
          if (!response.ok) {
-            alert(response.statusText);
+            console.log(response.statusText);
+            showError(response.statusText);
          }
          return response.json();
       })

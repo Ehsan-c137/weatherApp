@@ -279,6 +279,30 @@ body {
   padding: 1rem;
 }
 
+.error-modal {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 9px;
+  -webkit-transform: translateY(-700%);
+          transform: translateY(-700%);
+  background-color: brown;
+  color: white;
+  -webkit-transition: ease 400ms;
+  transition: ease 400ms;
+}
+
+.error-modal-active {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
 @media (max-width: 43em) {
   html {
     font-size: 59%;
